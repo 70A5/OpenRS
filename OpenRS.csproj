@@ -46,14 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_Overview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_Overview.Designer.cs">
+      <DependentUpon>Form_Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EditRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EditRes.Designer.cs">
+      <DependentUpon>Form_EditRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IntakeRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_IntakeRes.Designer.cs">
+      <DependentUpon>Form_IntakeRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Home.Designer.cs">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NewRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NewRes.Designer.cs">
+      <DependentUpon>Form_NewRes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_EditRes.resx">
+      <DependentUpon>Form_EditRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Home.resx">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_IntakeRes.resx">
+      <DependentUpon>Form_IntakeRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NewRes.resx">
+      <DependentUpon>Form_NewRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Overview.resx">
+      <DependentUpon>Form_Overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
