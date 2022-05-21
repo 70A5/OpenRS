@@ -37,9 +37,10 @@
             // 
             // btn_NewRes
             // 
-            this.btn_NewRes.Location = new System.Drawing.Point(278, 240);
+            this.btn_NewRes.Location = new System.Drawing.Point(208, 195);
+            this.btn_NewRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_NewRes.Name = "btn_NewRes";
-            this.btn_NewRes.Size = new System.Drawing.Size(190, 176);
+            this.btn_NewRes.Size = new System.Drawing.Size(142, 143);
             this.btn_NewRes.TabIndex = 0;
             this.btn_NewRes.Text = "Nieuwe reservering";
             this.btn_NewRes.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // Btn_IntakeRes
             // 
-            this.Btn_IntakeRes.Location = new System.Drawing.Point(505, 240);
+            this.Btn_IntakeRes.Location = new System.Drawing.Point(379, 195);
+            this.Btn_IntakeRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_IntakeRes.Name = "Btn_IntakeRes";
-            this.Btn_IntakeRes.Size = new System.Drawing.Size(190, 176);
+            this.Btn_IntakeRes.Size = new System.Drawing.Size(142, 143);
             this.Btn_IntakeRes.TabIndex = 1;
             this.Btn_IntakeRes.Text = "Ontvangst reservering";
             this.Btn_IntakeRes.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // Btn_EditRes
             // 
-            this.Btn_EditRes.Location = new System.Drawing.Point(728, 240);
+            this.Btn_EditRes.Location = new System.Drawing.Point(546, 195);
+            this.Btn_EditRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_EditRes.Name = "Btn_EditRes";
-            this.Btn_EditRes.Size = new System.Drawing.Size(190, 176);
+            this.Btn_EditRes.Size = new System.Drawing.Size(142, 143);
             this.Btn_EditRes.TabIndex = 2;
             this.Btn_EditRes.Text = "Bewerken reservering";
             this.Btn_EditRes.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // Btn_Overview
             // 
-            this.Btn_Overview.Location = new System.Drawing.Point(728, 444);
+            this.Btn_Overview.Location = new System.Drawing.Point(546, 361);
+            this.Btn_Overview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Overview.Name = "Btn_Overview";
-            this.Btn_Overview.Size = new System.Drawing.Size(190, 42);
+            this.Btn_Overview.Size = new System.Drawing.Size(142, 34);
             this.Btn_Overview.TabIndex = 3;
             this.Btn_Overview.Text = "Overzicht";
             this.Btn_Overview.UseVisualStyleBackColor = true;
@@ -77,9 +81,10 @@
             // 
             // Btn_Close
             // 
-            this.Btn_Close.Location = new System.Drawing.Point(1062, 12);
+            this.Btn_Close.Location = new System.Drawing.Point(796, 10);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.Size = new System.Drawing.Size(130, 48);
+            this.Btn_Close.Size = new System.Drawing.Size(98, 39);
             this.Btn_Close.TabIndex = 4;
             this.Btn_Close.Text = "Afsluiten";
             this.Btn_Close.UseVisualStyleBackColor = true;
@@ -87,15 +92,17 @@
             // 
             // Form_Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 711);
+            this.ClientSize = new System.Drawing.Size(903, 578);
             this.Controls.Add(this.Btn_Close);
             this.Controls.Add(this.Btn_Overview);
             this.Controls.Add(this.Btn_EditRes);
             this.Controls.Add(this.Btn_IntakeRes);
             this.Controls.Add(this.btn_NewRes);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 

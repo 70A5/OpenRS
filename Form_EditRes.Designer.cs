@@ -33,9 +33,10 @@
             // 
             // Btn_Back
             // 
-            this.Btn_Back.Location = new System.Drawing.Point(47, 41);
+            this.Btn_Back.Location = new System.Drawing.Point(35, 33);
+            this.Btn_Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Back.Name = "Btn_Back";
-            this.Btn_Back.Size = new System.Drawing.Size(104, 40);
+            this.Btn_Back.Size = new System.Drawing.Size(78, 32);
             this.Btn_Back.TabIndex = 0;
             this.Btn_Back.Text = "Terug";
             this.Btn_Back.UseVisualStyleBackColor = true;
@@ -43,11 +44,13 @@
             // 
             // Form_EditRes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 711);
+            this.ClientSize = new System.Drawing.Size(906, 578);
             this.Controls.Add(this.Btn_Back);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_EditRes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 

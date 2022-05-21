@@ -13,3 +13,6 @@ C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\obj\Debug\OpenRS.Form
 C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\obj\Debug\OpenRS.Form_IntakeRes.resources
 C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\obj\Debug\OpenRS.Form_NewRes.resources
 C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\obj\Debug\OpenRS.Form_Overview.resources
+C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\bin\Debug\System.Data.SQLite.dll
+C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\bin\Debug\System.Data.SQLite.xml
+C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\obj\Debug\OpenRS.csproj.CopyComplete

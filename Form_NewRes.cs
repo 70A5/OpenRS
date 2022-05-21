@@ -22,7 +22,6 @@ namespace OpenRS
         {
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
         }
 
         private void Btn_Back_Click(object sender, EventArgs e)

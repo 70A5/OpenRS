@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace OpenRS
 {
@@ -22,7 +23,6 @@ namespace OpenRS
         {
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btn_NewRes_Click(object sender, EventArgs e)
