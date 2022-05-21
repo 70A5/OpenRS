@@ -1,3 +1,3 @@
 # OpenRS
  
-#Open Rental Software
+Open Rental Software
