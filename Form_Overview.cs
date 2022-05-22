@@ -23,7 +23,7 @@ namespace OpenRS
         public Form_Overview()
         {
             InitializeComponent();
-            Fullscreen_Load();
+            //Fullscreen_Load();
             Create_db();
             LoadData();
         }

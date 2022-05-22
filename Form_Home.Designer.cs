@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Home));
             this.btn_NewRes = new System.Windows.Forms.Button();
             this.Btn_IntakeRes = new System.Windows.Forms.Button();
             this.Btn_EditRes = new System.Windows.Forms.Button();
@@ -38,7 +39,7 @@
             // btn_NewRes
             // 
             this.btn_NewRes.Location = new System.Drawing.Point(208, 195);
-            this.btn_NewRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_NewRes.Margin = new System.Windows.Forms.Padding(2);
             this.btn_NewRes.Name = "btn_NewRes";
             this.btn_NewRes.Size = new System.Drawing.Size(142, 143);
             this.btn_NewRes.TabIndex = 0;
@@ -49,7 +50,7 @@
             // Btn_IntakeRes
             // 
             this.Btn_IntakeRes.Location = new System.Drawing.Point(379, 195);
-            this.Btn_IntakeRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_IntakeRes.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_IntakeRes.Name = "Btn_IntakeRes";
             this.Btn_IntakeRes.Size = new System.Drawing.Size(142, 143);
             this.Btn_IntakeRes.TabIndex = 1;
@@ -60,7 +61,7 @@
             // Btn_EditRes
             // 
             this.Btn_EditRes.Location = new System.Drawing.Point(546, 195);
-            this.Btn_EditRes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_EditRes.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_EditRes.Name = "Btn_EditRes";
             this.Btn_EditRes.Size = new System.Drawing.Size(142, 143);
             this.Btn_EditRes.TabIndex = 2;
@@ -71,7 +72,7 @@
             // Btn_Overview
             // 
             this.Btn_Overview.Location = new System.Drawing.Point(546, 361);
-            this.Btn_Overview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Overview.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Overview.Name = "Btn_Overview";
             this.Btn_Overview.Size = new System.Drawing.Size(142, 34);
             this.Btn_Overview.TabIndex = 3;
@@ -82,7 +83,7 @@
             // Btn_Close
             // 
             this.Btn_Close.Location = new System.Drawing.Point(796, 10);
-            this.Btn_Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Close.Name = "Btn_Close";
             this.Btn_Close.Size = new System.Drawing.Size(98, 39);
             this.Btn_Close.TabIndex = 4;
@@ -100,10 +101,11 @@
             this.Controls.Add(this.Btn_EditRes);
             this.Controls.Add(this.Btn_IntakeRes);
             this.Controls.Add(this.btn_NewRes);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "OpenRS";
             this.ResumeLayout(false);
 
         }

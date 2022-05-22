@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_IntakeRes));
             this.Btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_Back
             // 
             this.Btn_Back.Location = new System.Drawing.Point(27, 28);
-            this.Btn_Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Back.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Back.Name = "Btn_Back";
             this.Btn_Back.Size = new System.Drawing.Size(84, 39);
             this.Btn_Back.TabIndex = 0;
@@ -48,10 +49,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 574);
             this.Controls.Add(this.Btn_Back);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_IntakeRes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Ontvangst Reservering - OpenRS";
             this.ResumeLayout(false);
 
         }

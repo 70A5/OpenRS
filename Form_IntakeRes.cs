@@ -15,7 +15,7 @@ namespace OpenRS
         public Form_IntakeRes()
         {
             InitializeComponent();
-            Fullscreen_Load();
+            //Fullscreen_Load();
         }
 
         private void Fullscreen_Load()
