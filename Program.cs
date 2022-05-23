@@ -16,7 +16,7 @@ namespace OpenRS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Home());
+            Application.Run(new Form_Splash());
         }
     }
 }
