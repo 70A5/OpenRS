@@ -60,5 +60,12 @@ namespace OpenRS
         {
             Close();
         }
+
+        private void Form_Home_Load(object sender, EventArgs e)
+        {
+            txt_StatusColor.Text = "•";
+            txt_StatusColor.ForeColor = Color.Green;
+            txt_Messages.Text = "Er zijn geen meldingen.";
+        }
     }
 }
