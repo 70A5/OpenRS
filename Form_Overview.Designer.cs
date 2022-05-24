@@ -35,13 +35,17 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txt_Orders = new System.Windows.Forms.TextBox();
-            this.txt_Connectie = new System.Windows.Forms.TextBox();
+            this.txt_UID = new System.Windows.Forms.TextBox();
             this.txt_Items = new System.Windows.Forms.TextBox();
             this.txt_Datum = new System.Windows.Forms.TextBox();
+            this.txt_IsFinished = new System.Windows.Forms.TextBox();
+            this.txt_IsTooLate = new System.Windows.Forms.TextBox();
             this.Order = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Connectie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsFinished = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsTooLate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +62,7 @@
             // 
             // btn_Insert
             // 
-            this.btn_Insert.Location = new System.Drawing.Point(330, 218);
+            this.btn_Insert.Location = new System.Drawing.Point(525, 218);
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(124, 43);
             this.btn_Insert.TabIndex = 2;
@@ -68,7 +72,7 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(331, 267);
+            this.btn_Update.Location = new System.Drawing.Point(526, 267);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(123, 43);
             this.btn_Update.TabIndex = 3;
@@ -78,7 +82,7 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(331, 316);
+            this.btn_Delete.Location = new System.Drawing.Point(526, 316);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(123, 43);
             this.btn_Delete.TabIndex = 4;
@@ -91,13 +95,15 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Order,
-            this.Connectie,
-            this.Items,
-            this.Datum});
+            this.UID,
+            this.Cid,
+            this.Datum,
+            this.IsFinished,
+            this.IsTooLate});
             this.dataGridView1.Location = new System.Drawing.Point(12, 218);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(308, 356);
+            this.dataGridView1.Size = new System.Drawing.Size(507, 356);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -108,12 +114,12 @@
             this.txt_Orders.Size = new System.Drawing.Size(42, 20);
             this.txt_Orders.TabIndex = 5;
             // 
-            // txt_Connectie
+            // txt_UID
             // 
-            this.txt_Connectie.Location = new System.Drawing.Point(92, 192);
-            this.txt_Connectie.Name = "txt_Connectie";
-            this.txt_Connectie.Size = new System.Drawing.Size(104, 20);
-            this.txt_Connectie.TabIndex = 6;
+            this.txt_UID.Location = new System.Drawing.Point(92, 192);
+            this.txt_UID.Name = "txt_UID";
+            this.txt_UID.Size = new System.Drawing.Size(104, 20);
+            this.txt_UID.TabIndex = 6;
             // 
             // txt_Items
             // 
@@ -129,6 +135,20 @@
             this.txt_Datum.Size = new System.Drawing.Size(76, 20);
             this.txt_Datum.TabIndex = 8;
             // 
+            // txt_IsFinished
+            // 
+            this.txt_IsFinished.Location = new System.Drawing.Point(326, 192);
+            this.txt_IsFinished.Name = "txt_IsFinished";
+            this.txt_IsFinished.Size = new System.Drawing.Size(100, 20);
+            this.txt_IsFinished.TabIndex = 9;
+            // 
+            // txt_IsTooLate
+            // 
+            this.txt_IsTooLate.Location = new System.Drawing.Point(432, 192);
+            this.txt_IsTooLate.Name = "txt_IsTooLate";
+            this.txt_IsTooLate.Size = new System.Drawing.Size(100, 20);
+            this.txt_IsTooLate.TabIndex = 10;
+            // 
             // Order
             // 
             this.Order.HeaderText = "Order";
@@ -138,28 +158,45 @@
             this.Order.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Order.Width = 40;
             // 
-            // Connectie
+            // UID
             // 
-            this.Connectie.HeaderText = "Connectie";
-            this.Connectie.MaxInputLength = 9;
-            this.Connectie.Name = "Connectie";
-            this.Connectie.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.UID.HeaderText = "UID";
+            this.UID.MaxInputLength = 9;
+            this.UID.Name = "UID";
+            this.UID.ReadOnly = true;
+            this.UID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Items
+            // Cid
             // 
-            this.Items.HeaderText = "Items";
-            this.Items.MaxInputLength = 2;
-            this.Items.Name = "Items";
-            this.Items.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Items.Width = 50;
+            this.Cid.HeaderText = "Cid";
+            this.Cid.MaxInputLength = 500;
+            this.Cid.Name = "Cid";
+            this.Cid.ReadOnly = true;
+            this.Cid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cid.Width = 50;
             // 
             // Datum
             // 
             this.Datum.HeaderText = "Datum";
             this.Datum.MaxInputLength = 8;
             this.Datum.Name = "Datum";
+            this.Datum.ReadOnly = true;
             this.Datum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Datum.Width = 75;
+            // 
+            // IsFinished
+            // 
+            this.IsFinished.HeaderText = "IsFinished";
+            this.IsFinished.Name = "IsFinished";
+            this.IsFinished.ReadOnly = true;
+            this.IsFinished.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // IsTooLate
+            // 
+            this.IsTooLate.HeaderText = "IsTooLate";
+            this.IsTooLate.Name = "IsTooLate";
+            this.IsTooLate.ReadOnly = true;
+            this.IsTooLate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Form_Overview
             // 
@@ -167,9 +204,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(952, 586);
+            this.Controls.Add(this.txt_IsTooLate);
+            this.Controls.Add(this.txt_IsFinished);
             this.Controls.Add(this.txt_Datum);
             this.Controls.Add(this.txt_Items);
-            this.Controls.Add(this.txt_Connectie);
+            this.Controls.Add(this.txt_UID);
             this.Controls.Add(this.txt_Orders);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
@@ -195,12 +234,16 @@
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txt_Orders;
-        private System.Windows.Forms.TextBox txt_Connectie;
+        private System.Windows.Forms.TextBox txt_UID;
         private System.Windows.Forms.TextBox txt_Items;
         private System.Windows.Forms.TextBox txt_Datum;
+        private System.Windows.Forms.TextBox txt_IsFinished;
+        private System.Windows.Forms.TextBox txt_IsTooLate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Order;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Connectie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsFinished;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsTooLate;
     }
 }
