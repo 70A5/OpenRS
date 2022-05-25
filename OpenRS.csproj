@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CMessages.cs" />
     <Compile Include="Form_Splash.cs">
       <SubType>Form</SubType>
     </Compile>
