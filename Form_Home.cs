@@ -66,9 +66,9 @@ namespace OpenRS
             Close();
         }
 
-
         private void Form_Home_Load(object sender, EventArgs e)
         {
+            
             var con = new SQLiteConnection(cs);
             con.Open();
 
@@ -107,7 +107,7 @@ namespace OpenRS
                 {
                     txt_Messages.Text = "Er zijn " + iMessages + " meldingen.";
                 }
-            }
+            }         
         }
     }
 }

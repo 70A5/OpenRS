@@ -37,7 +37,7 @@ namespace OpenRS
 
             while (dr.Read())
             {
-                dataGridView1.Rows.Insert(0,dr.GetString(0),dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetInt32(4), dr.GetInt32(5));
+                dataGridView1.Rows.Insert(0,dr.GetString(0),dr.GetString(1), dr.GetString(2), dr.GetInt32(3), dr.GetInt32(4), dr.GetInt32(5), dr.GetInt32(6));
             }
         }
 
@@ -49,7 +49,7 @@ namespace OpenRS
                 using (var sqlite =new SQLiteConnection(@"Data Source=" + path))
                 {
                     sqlite.Open();
-                    string sql = "CREATE TABLE T1R_OpenRS1 (Orders TEXT, UID TEXT, Cid TEXT, Datum TEXT, IsFinished INTEGER, IsTooLate INTEGER); CREATE TABLE T2C_OpenRS1 (Cid TEXT, Make TEXT, Model TEXT, Serial TEXT, Lens TEXT, IsAvailable INTEGER); CREATE TABLE T3U_OpenRS1 (UID TEXT, Voornaam TEXT, Tussenvoegsel TEXT, Achternaam TEXT, Email TEXT, HasActiveOrder INTEGER);";
+                    string sql = "CREATE TABLE T1R_OpenRS1 (Orders TEXT, UID TEXT, Cid TEXT, StartDate INTEGER, EndDate INTEGER, IsFinished INTEGER, IsTooLate INTEGER); CREATE TABLE T2C_OpenRS1 (Cid TEXT, Make TEXT, Model TEXT, Serial TEXT, Lens TEXT, IsAvailable INTEGER); CREATE TABLE T3U_OpenRS1 (UID TEXT, Voornaam TEXT, Tussenvoegsel TEXT, Achternaam TEXT, Email TEXT, HasActiveOrder INTEGER);";
                     SQLiteCommand command = new SQLiteCommand(sql,sqlite);
                     command.ExecuteNonQuery();
                 }
@@ -82,30 +82,33 @@ namespace OpenRS
 
             try
             {
-                cmd.CommandText = "INSERT INTO T1R_OpenRS1 (Orders, UID, Cid, Datum, IsFinished, IsTooLate) VALUES(@Orders,@UID,@Cid,@Datum,@IsFinished,@IsTooLate);";
+                cmd.CommandText = "INSERT INTO T1R_OpenRS1 (Orders, UID, Cid, StartDate, EndDate, IsFinished, IsTooLate) VALUES(@Orders,@UID,@Cid,@StartDate,@EndDate,@IsFinished,@IsTooLate);";
 
                 string ORDERS = txt_Orders.Text;
                 string UID = txt_UID.Text;
                 string CID = txt_Items.Text;
-                string DATUM = txt_Datum.Text;
+                string STARTDATE = txt_StartDate.Text;
+                string ENDDATE = txt_EndDate.Text;
                 int ISFINISHED = int.Parse(txt_IsFinished.Text);
                 int ISTOOLATE = int.Parse(txt_IsTooLate.Text);
 
                 cmd.Parameters.AddWithValue("@Orders", ORDERS);
                 cmd.Parameters.AddWithValue("@UID", UID);
                 cmd.Parameters.AddWithValue("@Cid", CID);
-                cmd.Parameters.AddWithValue("@Datum", DATUM);
+                cmd.Parameters.AddWithValue("@StartDate", STARTDATE);
+                cmd.Parameters.AddWithValue("@EndDate", ENDDATE);
                 cmd.Parameters.AddWithValue("@IsFinished", ISFINISHED);
                 cmd.Parameters.AddWithValue("@IsTooLate", ISTOOLATE);
 
-                dataGridView1.ColumnCount = 6;
+                dataGridView1.ColumnCount = 7;
                 dataGridView1.Columns[0].Name = "Order";
                 dataGridView1.Columns[1].Name = "UID";
                 dataGridView1.Columns[2].Name = "Cid";
-                dataGridView1.Columns[3].Name = "Datum";
-                dataGridView1.Columns[4].Name = "IsFinished";
-                dataGridView1.Columns[5].Name = "IsTooLate";
-                string[] row = new string[] { ORDERS, UID, CID, DATUM, ISFINISHED.ToString(), ISTOOLATE.ToString()};
+                dataGridView1.Columns[3].Name = "StartDate";
+                dataGridView1.Columns[4].Name = "EndDate";
+                dataGridView1.Columns[5].Name = "IsFinished";
+                dataGridView1.Columns[6].Name = "IsTooLate";
+                string[] row = new string[] { ORDERS, UID, CID, STARTDATE, ENDDATE, ISFINISHED.ToString(), ISTOOLATE.ToString()};
                 dataGridView1.Rows.Add(row);
                 cmd.ExecuteNonQuery();
             }
@@ -122,12 +125,13 @@ namespace OpenRS
 
             var cmd = new SQLiteCommand(con);
 
-            cmd.CommandText = "UPDATE T1R_OpenRS1 Set UID=@UID, Cid=@Cid, Datum=@Datum, IsFinished=@IsFinished, IsTooLate=@IsTooLate WHERE Orders=@Orders;";
+            cmd.CommandText = "UPDATE T1R_OpenRS1 Set UID=@UID, Cid=@Cid, StartDate=@StartDate, EndDate=@EndDate, IsFinished=@IsFinished, IsTooLate=@IsTooLate WHERE Orders=@Orders;";
             cmd.Prepare();
             cmd.Parameters.AddWithValue("@Orders", txt_Orders.Text);
             cmd.Parameters.AddWithValue("@UID", txt_UID.Text);
             cmd.Parameters.AddWithValue("@Cid", txt_Items.Text);
-            cmd.Parameters.AddWithValue("@Datum", txt_Datum.Text);
+            cmd.Parameters.AddWithValue("@StartDate", txt_StartDate.Text);
+            cmd.Parameters.AddWithValue("@EndDate", txt_EndDate.Text);
             cmd.Parameters.AddWithValue("@IsFinished", txt_IsFinished.Text);
             cmd.Parameters.AddWithValue("@IsTooLate", txt_IsTooLate.Text);
 
@@ -169,7 +173,8 @@ namespace OpenRS
                     txt_Orders.Text = dataGridView1.Rows[e.RowIndex].Cells["Order"].FormattedValue.ToString();
                     txt_UID.Text = dataGridView1.Rows[e.RowIndex].Cells["UID"].FormattedValue.ToString();
                     txt_Items.Text = dataGridView1.Rows[e.RowIndex].Cells["Cid"].FormattedValue.ToString();
-                    txt_Datum.Text = dataGridView1.Rows[e.RowIndex].Cells["Datum"].FormattedValue.ToString();
+                    txt_StartDate.Text = dataGridView1.Rows[e.RowIndex].Cells["StartDate"].FormattedValue.ToString();
+                    txt_EndDate.Text = dataGridView1.Rows[e.RowIndex].Cells["EndDate"].FormattedValue.ToString();
                     txt_IsFinished.Text = dataGridView1.Rows[e.RowIndex].Cells["IsFinished"].FormattedValue.ToString();
                     txt_IsTooLate.Text = dataGridView1.Rows[e.RowIndex].Cells["IsTooLate"].FormattedValue.ToString();
                 }
