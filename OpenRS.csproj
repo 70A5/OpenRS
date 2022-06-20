@@ -70,7 +70,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDBCon.cs" />
     <Compile Include="CMessages.cs" />
+    <Compile Include="Form_NewRes2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NewRes2.Designer.cs">
+      <DependentUpon>Form_NewRes2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_NewRes2.resx">
+      <DependentUpon>Form_NewRes2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Splash.resx">
       <DependentUpon>Form_Splash.cs</DependentUpon>
     </EmbeddedResource>

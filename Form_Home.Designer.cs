@@ -136,6 +136,7 @@
             this.txt_Messages.Location = new System.Drawing.Point(281, 460);
             this.txt_Messages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Messages.Name = "txt_Messages";
+            this.txt_Messages.ReadOnly = true;
             this.txt_Messages.Size = new System.Drawing.Size(393, 36);
             this.txt_Messages.TabIndex = 6;
             // 
