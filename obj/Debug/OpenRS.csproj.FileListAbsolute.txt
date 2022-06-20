@@ -36,3 +36,4 @@ C:\Users\joasv\Downloads\OpenRS-main\obj\Debug\OpenRS.csproj.CoreCompileInputs.c
 C:\Users\joasv\Downloads\OpenRS-main\obj\Debug\OpenRS.csproj.CopyComplete
 C:\Users\joasv\Downloads\OpenRS-main\obj\Debug\OpenRS.exe
 C:\Users\joasv\Downloads\OpenRS-main\obj\Debug\OpenRS.pdb
+C:\Users\joasv\OneDrive - COG\Periode 4\PROJ\OpenRS\OpenRS\obj\Debug\OpenRS.Form_NewRes2.resources
